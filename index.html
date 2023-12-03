@@ -4,24 +4,76 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <title>Salary Calculator</title>
-  <script src="script.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <section>
   <header>
     <h1>Salary Calculator</h1>
   </header>
   <main>
+  </section>
 
+  <section>
     <h2>Add Employee</h2>
-    <input data-testid="firstNameInput" placeholder="First Name"></input>
-    <input data-testid="lastNameInput" placeholder="Last Name"></input>
-    <input data-testid="idInput" placeholder="Employee ID"></input>
-    <input data-testid="titleInput" placeholder="Job title"></input>
-	  <input data-testid="annualSalaryInput" placeholder="Annual Salary"></input>
-    <button data-testid="submitButton" onclick="">Submit</button>
+    <input id="firstname" data-testid="firstNameInput" placeholder="First Name"></input>
+    <input id="lastname" data-testid="lastNameInput" placeholder="Last Name"></input>
+    <input id="employeenumber" data-testid="idInput" placeholder="Employee ID" ></input>
+    <input id="jobtitle" data-testid="titleInput" placeholder="Job title"></input>
+	  <input id="salary" data-testid="annualSalaryInput" placeholder="Annual Salary" ></input>
+    <button id="submit-btn" data-testid="submitButton" onclick="addingData(event)">Submit</button>
+  </section>
+
     <h2>Employees</h2>
-    <tbody>
-    </tbody>
+    <table>
+      <tbody>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Employee ID</th>
+          <th>Job Title</th>
+          <th>Annual Salary</th>
+          <th></th>
+        </tr>
+    <!-- <tr>
+      <td>Hmoovzong</td>
+      <td>Vang</td>
+      <td>285679</td>
+      <td>Software Egineer</td>
+      <td>Not enough</td>
+      ><td><button id="delete-btn">Delete</button></td
+    </tr>
+    <tr>
+      <td>Gavin</td>
+      <td>Popken</td>
+      <td>285680</td>
+      <td>Prime Student</td>
+      <td>More than me</td>
+      <td><button id="delete-btn">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Dusty</td>
+      <td>Hagstrom</td>
+      <td>285681</td>
+      <td>Software Egineer</td>
+      <td>WAY more than me</td>
+      <td><button id="delete-btn">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Tucker</td>
+      <td>Melssen</td>
+      <td>285682</td>
+      <td>Prime Student</td>
+      <td>More than me but not more than Gavin</td>
+      <td><button id="delete-btn">Delete</button></td>
+    </tr> -->
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="6"></td>
+    </tr>
+  </tfoot>
+  </table>
   </main>
   <footer>
     <p>Total Monthly</p>
