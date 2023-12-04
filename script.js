@@ -33,6 +33,9 @@ function addingData(event) {
   inputSalary.innerText = salary;
 
   deleteButton.textContent = "Delete";
+  deleteButton.onclick = function () {
+    deleteRow(creatingRow);
+  };
 
   creatingRow.append(
     inputFirst,
@@ -44,7 +47,7 @@ function addingData(event) {
   );
   tBody.append(creatingRow);
 
-  document.getElementById("firstname").value = "";
+  document.getElementById("firstname"). value = "";
   document.getElementById("lastname").value = "";
   document.getElementById("employeenumber").value = "";
   document.getElementById("jobtitle").value = "";
@@ -62,11 +65,17 @@ function totalMonthly() {
     sum += salary;
   }
   let totalMonthly = sum / 12;
-  let formattedTotal = 'Total Monthly :' + ' ' + new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD'
-  }).format(totalMonthly);
+  let formattedTotal =
+    "Total Monthly :" +
+    " " +
+    new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    }).format(totalMonthly);
   footer.textContent = formattedTotal;
-  
-  console.log(totalMonthly);
-} 
+}
+
+function deleteRow(row) {
+  row.parentNode.removeChild(row);
+  totalMonthly();
+}
