@@ -16,6 +16,16 @@ table {
   tr:nth-child(odd) {
     background-color: #7977773d;
   }
-  tfoot{
+  /* tfoot{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
     background-color: #0000003d;
+  }
+  footer{
+    text-align: right;
+  } */
+
+  .over-budget{
+    color: red;
   }

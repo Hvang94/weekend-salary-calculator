@@ -48,7 +48,7 @@ function addingData(event) {
   tBody.append(creatingRow);
 
   document.getElementById("firstname"). value = "";
-  document.getElementById("lastname").value = "";
+  document.getElementById("lastname").value = ""
   document.getElementById("employeenumber").value = "";
   document.getElementById("jobtitle").value = "";
   document.getElementById("salary").value = "";
@@ -73,6 +73,13 @@ function totalMonthly() {
       currency: "USD",
     }).format(totalMonthly);
   footer.textContent = formattedTotal;
+
+  if(totalMonthly > 20000){
+    footer.classList.add("over-budget")
+    totalMonthly.style = "red"
+  } else {
+    footer.classList.remove("over-budget")
+  }
 }
 
 function deleteRow(row) {
